@@ -2,7 +2,7 @@
 
 Follow this README in order to properly run this application.
 
-Live App: 
+Live App: https://wise-bacon.glitch.me/
 
 ## Prerequisites for Local Installation.
 

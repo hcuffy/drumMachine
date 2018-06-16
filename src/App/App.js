@@ -14,13 +14,27 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header>
-          <h1>{this.state.helloWorld}</h1>
-        </header>
+      <div id="drum-machine" className="App">
+        <div id="display">
+        <table>
+
+ <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+        </div>
       </div>
     );
   }
 }
+
+
 
 export default App;
