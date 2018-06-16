@@ -32,7 +32,6 @@ class App extends Component {
 
 
   drumAudioQ() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'Q'
     });
@@ -40,7 +39,6 @@ class App extends Component {
   }
 
   drumAudioW() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'W'
     });
@@ -48,28 +46,24 @@ class App extends Component {
   }
 
   drumAudioE() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'E'
     });
     this.e_Audio.play();
   }
   drumAudioA() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'A'
     });
     this.a_Audio.play();
   }
   drumAudioS() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'S'
     });
     this.s_Audio.play();
   }
   drumAudioD() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'D'
     });
@@ -77,7 +71,6 @@ class App extends Component {
   }
 
   drumAudioZ() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'Z'
     });
@@ -85,7 +78,6 @@ class App extends Component {
   }
 
   drumAudioX() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'X'
     });
@@ -93,7 +85,6 @@ class App extends Component {
   }
 
   drumAudioC() {
-    let { audioLabel } = this.state;
     this.setState({
       audioLabel: 'C'
     });
@@ -104,7 +95,7 @@ class App extends Component {
     return (
       <div id="drum-machine" className="App">
          <header>
-            <h1>Drum Machine</h1>
+            <h1>Drum Machine with React</h1>
          </header>
         <div id="display">
             <Board
