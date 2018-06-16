@@ -1,0 +1,11 @@
+.table {
+  background-color: #9ecad8;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+}
