@@ -15,119 +15,119 @@ import WASHBOARD from './Audio/Washboard.mp3';
 
 class App extends Component {
   constructor(props) {
-   super(props);
+    super(props);
 
-   this.state = {
-    audioLabel : '',
-    volume : '0.5'
-   };
+    this.state = {
+      audioLabel: '',
+      volume: '0.5'
+    };
 
-   this.drumAudioQ = this.drumAudioQ.bind(this);
-   this.q_Audio  = new Audio(BASS_SCRAPE);
-   this.drumAudioW = this.drumAudioW.bind(this);
-   this.w_Audio  = new Audio(CABASSAS);
-   this.drumAudioE = this.drumAudioE.bind(this);
-   this.e_Audio  = new Audio(DRUMSCONGA);
-   this.drumAudioA = this.drumAudioA.bind(this);
-   this.a_Audio  = new Audio(GRAMOPHONE);
-   this.drumAudioS = this.drumAudioS.bind(this);
-   this.s_Audio  = new Audio(RACTHET);
-   this.drumAudioD = this.drumAudioD.bind(this);
-   this.d_Audio  = new Audio(SCRAPES);
-   this.drumAudioZ = this.drumAudioZ.bind(this);
-   this.z_Audio  = new Audio(SNAREDRUM);
-   this.drumAudioX = this.drumAudioX.bind(this);
-   this.x_Audio  = new Audio(TAMBOURINE);
-   this.drumAudioC = this.drumAudioC.bind(this);
-   this.c_Audio  = new Audio(WASHBOARD);
-   this.updateVolume = this.updateVolume.bind(this);
-}
+    this.drumClipQ = this.drumClipQ.bind(this);
+    this.q_clip = new Audio(BASS_SCRAPE);
+    this.drumClipW = this.drumClipW.bind(this);
+    this.w_clip = new Audio(CABASSAS);
+    this.drumClipE = this.drumClipE.bind(this);
+    this.e_clip = new Audio(DRUMSCONGA);
+    this.drumClipA = this.drumClipA.bind(this);
+    this.a_clip = new Audio(GRAMOPHONE);
+    this.drumClipS = this.drumClipS.bind(this);
+    this.s_clip = new Audio(RACTHET);
+    this.drumClipD = this.drumClipD.bind(this);
+    this.d_clip = new Audio(SCRAPES);
+    this.drumClipZ = this.drumClipZ.bind(this);
+    this.z_clip = new Audio(SNAREDRUM);
+    this.drumClipX = this.drumClipX.bind(this);
+    this.x_clip = new Audio(TAMBOURINE);
+    this.drumClipC = this.drumClipC.bind(this);
+    this.c_clip = new Audio(WASHBOARD);
+    this.updateVolume = this.updateVolume.bind(this);
+  }
 
 
-  drumAudioQ() {
+  drumClipQ() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'BASS_SCRAPE'
     });
-    this.q_Audio.volume = volume;
-    this.q_Audio.play();
+    this.q_clip.volume = volume;
+    this.q_clip.play();
   }
 
-  drumAudioW() {
+  drumClipW() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'CABASSAS'
     });
-    this.w_Audio.volume = volume;
-    this.w_Audio.play();
+    this.w_clip.volume = volume;
+    this.w_clip.play();
   }
 
-  drumAudioE() {
+  drumClipE() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'DRUMSCONGA'
     });
-    this.e_Audio.volume = volume;
-    this.e_Audio.play();
+    this.e_clip.volume = volume;
+    this.e_clip.play();
   }
-  drumAudioA() {
+  drumClipA() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'GRAMOPHONE'
     });
-    this.a_Audio.volume = volume;
-    this.a_Audio.play();
+    this.a_clip.volume = volume;
+    this.a_clip.play();
   }
-  drumAudioS() {
+  drumClipS() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'RACTHET'
     });
-    this.s_Audio.volume = volume;
-    this.s_Audio.play();
+    this.s_clip.volume = volume;
+    this.s_clip.play();
   }
-  drumAudioD() {
+  drumClipD() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'SCRAPES'
     });
-    this.d_Audio.volume = volume;
-    this.d_Audio.play();
+    this.d_clip.volume = volume;
+    this.d_clip.play();
   }
 
-  drumAudioZ() {
+  drumClipZ() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'SNAREDRUM'
     });
-    this.z_Audio.volume = volume;
-    this.z_Audio.play();
+    this.z_clip.volume = volume;
+    this.z_clip.play();
   }
 
-  drumAudioX() {
+  drumClipX() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'TAMBOURINE'
     });
-    this.x_Audio.volume = volume;
-    this.x_Audio.play();
+    this.x_clip.volume = volume;
+    this.x_clip.play();
   }
 
-  drumAudioC() {
+  drumClipC() {
     let { volume } = this.state;
     this.setState({
       audioLabel: 'WASHBOARD'
     });
-    this.c_Audio.volume = volume;
-    this.c_Audio.play();
+    this.c_clip.volume = volume;
+    this.c_clip.play();
   }
 
   updateVolume(e) {
-      this.setState({
-        volume: e.target.value
-      });
+    this.setState({
+      volume: e.target.value
+    });
+  }
 
-    }
   render() {
     return (
       <div id="drum-machine" className="App">
@@ -136,15 +136,15 @@ class App extends Component {
          </header>
         <div id="display">
             <Board
-             drumAudioQ={this.drumAudioQ}
-             drumAudioW={this.drumAudioW}
-             drumAudioE={this.drumAudioE}
-             drumAudioA={this.drumAudioA}
-             drumAudioS={this.drumAudioS}
-             drumAudioD={this.drumAudioD}
-             drumAudioZ={this.drumAudioZ}
-             drumAudioX={this.drumAudioX}
-             drumAudioC={this.drumAudioC}
+             drumClipQ={this.drumClipQ}
+             drumClipW={this.drumClipW}
+             drumClipE={this.drumClipE}
+             drumClipA={this.drumClipA}
+             drumClipS={this.drumClipS}
+             drumClipD={this.drumClipD}
+             drumClipZ={this.drumClipZ}
+             drumClipX={this.drumClipX}
+             drumClipC={this.drumClipC}
             />
             <div>
             <label>{this.state.audioLabel}</label>
@@ -161,7 +161,7 @@ class App extends Component {
           />
           </div>
         </div>
-        <span>Audio files were precured from: <a href="http://www.freesfx.co.uk/" target="_blank">FreeSFX
+        <span>Audio files were precured from: <a href="http://www.freesfx.co.uk/" target="_blank" rel="noopener noreferrer">FreeSFX
           </a></span>
       </div>
     );
