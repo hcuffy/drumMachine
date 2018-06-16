@@ -1,19 +1,23 @@
 .App {
   text-align: center;
+  background-color: #f49842;
+  padding-bottom: 100%;
 }
 
 header {
-  margin-top: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 
-.display {
-  float: left;
-}
-
 label {
+  font-size: 20px;
   background-color: grey;
   height: 30px;
   width: 100px;
-  margin-top: 10px;
+  margin: 10px 0 30px 0;
+}
+
+span {
+  margin-right: 20px;
+  font-size: 20px;
 }

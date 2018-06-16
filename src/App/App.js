@@ -8,7 +8,8 @@ class App extends Component {
    super(props);
 
    this.state = {
-    audioLabel : ''
+    audioLabel : '',
+    volume : "0.5"
    };
    this.drumAudioQ = this.drumAudioQ.bind(this);
    this.q_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
@@ -28,69 +29,94 @@ class App extends Component {
    this.x_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
    this.drumAudioC = this.drumAudioC.bind(this);
    this.c_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.updateVolume = this.updateVolume.bind(this);
 }
 
 
   drumAudioQ() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'Q'
     });
+    this.q_Audio.volume = volume;
     this.q_Audio.play();
   }
 
   drumAudioW() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'W'
     });
+    this.w_Audio.volume = volume;
     this.w_Audio.play();
   }
 
   drumAudioE() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'E'
     });
+    this.e_Audio.volume = volume;
     this.e_Audio.play();
   }
   drumAudioA() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'A'
     });
+    this.a_Audio.volume = volume;
     this.a_Audio.play();
   }
   drumAudioS() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'S'
     });
+    this.s_Audio.volume = volume;
     this.s_Audio.play();
   }
   drumAudioD() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'D'
     });
+    this.d_Audio.volume = volume;
     this.d_Audio.play();
   }
 
   drumAudioZ() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'Z'
     });
+    this.z_Audio.volume = volume;
     this.z_Audio.play();
   }
 
   drumAudioX() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'X'
     });
+    this.x_Audio.volume = volume;
     this.x_Audio.play();
   }
 
   drumAudioC() {
+    let { volume } = this.state;
     this.setState({
       audioLabel: 'C'
     });
+    this.c_Audio.volume = volume;
     this.c_Audio.play();
   }
 
+  updateVolume(e) {
+      this.setState({
+        volume: e.target.value
+      });
+
+    }
   render() {
     return (
       <div id="drum-machine" className="App">
@@ -112,6 +138,17 @@ class App extends Component {
             <div>
             <label>{this.state.audioLabel}</label>
             </div>
+          <div className="App-speed">
+          <span>Volume Control</span>
+            <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value={this.state.volume}
+            onChange={this.updateVolume}
+          />
+          </div>
         </div>
       </div>
     );
