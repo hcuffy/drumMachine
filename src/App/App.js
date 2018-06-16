@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Board from './Components/board.js';
-import soundFile from './Audio/Gramophone.mp3';
+import BASS_SCRAPE from './Audio/Bass_Scrape.mp3';
+import CABASSAS from './Audio/Cabassas.mp3';
+import DRUMSCONGA from './Audio/DrumsConga.mp3';
+import GRAMOPHONE from './Audio/Gramophone.mp3';
+import RACTHET from './Audio/RatchetPercussion.mp3';
+import SCRAPES from './Audio/ScrapesPercussion.mp3';
+import SNAREDRUM from './Audio/SnareDrum.mp3';
+import TAMBOURINE from './Audio/Tambourine.mp3';
+import WASHBOARD from './Audio/Washboard.mp3';
+
 
 class App extends Component {
   constructor(props) {
@@ -14,23 +23,23 @@ class App extends Component {
    };
 
    this.drumAudioQ = this.drumAudioQ.bind(this);
-   this.q_Audio  = new Audio(soundFile);
+   this.q_Audio  = new Audio(BASS_SCRAPE);
    this.drumAudioW = this.drumAudioW.bind(this);
-   this.w_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.w_Audio  = new Audio(CABASSAS);
    this.drumAudioE = this.drumAudioE.bind(this);
-   this.e_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.e_Audio  = new Audio(DRUMSCONGA);
    this.drumAudioA = this.drumAudioA.bind(this);
-   this.a_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.a_Audio  = new Audio(GRAMOPHONE);
    this.drumAudioS = this.drumAudioS.bind(this);
-   this.s_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.s_Audio  = new Audio(RACTHET);
    this.drumAudioD = this.drumAudioD.bind(this);
-   this.d_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.d_Audio  = new Audio(SCRAPES);
    this.drumAudioZ = this.drumAudioZ.bind(this);
-   this.z_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.z_Audio  = new Audio(SNAREDRUM);
    this.drumAudioX = this.drumAudioX.bind(this);
-   this.x_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.x_Audio  = new Audio(TAMBOURINE);
    this.drumAudioC = this.drumAudioC.bind(this);
-   this.c_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.c_Audio  = new Audio(WASHBOARD);
    this.updateVolume = this.updateVolume.bind(this);
 }
 
@@ -38,7 +47,7 @@ class App extends Component {
   drumAudioQ() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'Q'
+      audioLabel: 'BASS_SCRAPE'
     });
     this.q_Audio.volume = volume;
     this.q_Audio.play();
@@ -47,7 +56,7 @@ class App extends Component {
   drumAudioW() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'W'
+      audioLabel: 'CABASSAS'
     });
     this.w_Audio.volume = volume;
     this.w_Audio.play();
@@ -56,7 +65,7 @@ class App extends Component {
   drumAudioE() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'E'
+      audioLabel: 'DRUMSCONGA'
     });
     this.e_Audio.volume = volume;
     this.e_Audio.play();
@@ -64,7 +73,7 @@ class App extends Component {
   drumAudioA() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'A'
+      audioLabel: 'GRAMOPHONE'
     });
     this.a_Audio.volume = volume;
     this.a_Audio.play();
@@ -72,7 +81,7 @@ class App extends Component {
   drumAudioS() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'S'
+      audioLabel: 'RACTHET'
     });
     this.s_Audio.volume = volume;
     this.s_Audio.play();
@@ -80,7 +89,7 @@ class App extends Component {
   drumAudioD() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'D'
+      audioLabel: 'SCRAPES'
     });
     this.d_Audio.volume = volume;
     this.d_Audio.play();
@@ -89,7 +98,7 @@ class App extends Component {
   drumAudioZ() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'Z'
+      audioLabel: 'SNAREDRUM'
     });
     this.z_Audio.volume = volume;
     this.z_Audio.play();
@@ -98,7 +107,7 @@ class App extends Component {
   drumAudioX() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'X'
+      audioLabel: 'TAMBOURINE'
     });
     this.x_Audio.volume = volume;
     this.x_Audio.play();
@@ -107,7 +116,7 @@ class App extends Component {
   drumAudioC() {
     let { volume } = this.state;
     this.setState({
-      audioLabel: 'C'
+      audioLabel: 'WASHBOARD'
     });
     this.c_Audio.volume = volume;
     this.c_Audio.play();
@@ -156,7 +165,5 @@ class App extends Component {
     );
   }
 }
-
-
 
 export default App;
