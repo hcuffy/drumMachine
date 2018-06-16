@@ -1,36 +1,27 @@
 import React from 'react';
-import './style.css';
-import CamperList from './campers_list';
+import '../App.css';
 
-const listOfCampers = (props) => {
 
-  const {recent} = props.campers;
-  const items = recent.map((camper, idx) => {
-    return <CamperList key={idx} number={idx + 1} camper={camper}/>
-  });
+const Board = (props) => {
 
   return (<table className="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th colSpan="4" className="table-header">
-          <h2>Leader Board</h2>
-        </th>
+     <tr>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>Q</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>W</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>E</button></td>
       </tr>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Camper</th>
-        <th onClick={props.changeSortOrder} scope="col">Points 30 Days
-          <i className="fa fa-sort" aria-hidden="true"></i>
-        </th>
-        <th onClick={props.changeSortOrderAll} scope="col">All Time Points
-          <i className="fa fa-sort" aria-hidden="true"></i>
-        </th>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>A</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>S</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>D</button></td>
       </tr>
-    </thead>
-    <tbody>
-      {items}
-    </tbody>
+      <tr>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>Z</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>X</button></td>
+        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>C</button></td>
+      </tr>
+
   </table>);
 }
 
-export default listOfCampers;
+export default Board;
