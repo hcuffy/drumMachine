@@ -17,7 +17,7 @@ label {
   margin: 10px 0 30px 0;
 }
 
-span {
+.volume-control {
   margin-right: 20px;
   font-size: 20px;
 }

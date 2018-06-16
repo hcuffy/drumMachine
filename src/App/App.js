@@ -150,7 +150,7 @@ class App extends Component {
             <label>{this.state.audioLabel}</label>
             </div>
           <div className="App-speed">
-          <span>Volume Control</span>
+          <span class="volume-control">Volume Control</span>
             <input
             type="range"
             min="0"
@@ -161,6 +161,8 @@ class App extends Component {
           />
           </div>
         </div>
+        <span>Audio files were precured from: <a href="http://www.freesfx.co.uk/" target="_blank">FreeSFX
+          </a></span>
       </div>
     );
   }
