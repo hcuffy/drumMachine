@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Board from './Components/board.js';
+import soundFile from './Audio/Gramophone.mp3';
 
 class App extends Component {
   constructor(props) {
@@ -9,10 +10,11 @@ class App extends Component {
 
    this.state = {
     audioLabel : '',
-    volume : "0.5"
+    volume : '0.5'
    };
+
    this.drumAudioQ = this.drumAudioQ.bind(this);
-   this.q_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+   this.q_Audio  = new Audio(soundFile);
    this.drumAudioW = this.drumAudioW.bind(this);
    this.w_Audio  = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
    this.drumAudioE = this.drumAudioE.bind(this);
