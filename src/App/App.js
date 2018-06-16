@@ -22,8 +22,11 @@ class App extends Component {
   render() {
     return (
       <div id="drum-machine" className="App">
+ <header>
+<h1>Drum Machine</h1>
+ </header>
         <div id="display">
-        
+
         <Board
          drumAudioQ={this.drumAudioQ}
         />

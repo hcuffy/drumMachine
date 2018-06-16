@@ -4,21 +4,21 @@ import '../App.css';
 
 const Board = (props) => {
 
-  return (<table className="table table-striped table-bordered">
+  return (<table className="table">
      <tr>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>Q</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>W</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>E</button></td>
+        <td id="drumQ" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>Q</button></td>
+        <td id="drumW" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>W</button></td>
+        <td id="drumE" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>E</button></td>
       </tr>
       <tr>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>A</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>S</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>D</button></td>
+        <td id="drumA" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>A</button></td>
+        <td id="drumS" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>S</button></td>
+        <td id="drumD" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>D</button></td>
       </tr>
       <tr>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>Z</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>X</button></td>
-        <td><button type="button" class="btn btn-info drum-pad" onClick={props.drumAudioQ}>C</button></td>
+        <td id="drumZ" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>Z</button></td>
+        <td id="drumX" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>X</button></td>
+        <td id="drumC" class="drum-pad"><button type="button" class="btn btn-info" onClick={props.drumAudioQ}>C</button></td>
       </tr>
 
   </table>);
