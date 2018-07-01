@@ -1,4 +1,4 @@
-# Product Landing Page
+# Drum Machine App
 
 Follow this README in order to properly run this application.
 
